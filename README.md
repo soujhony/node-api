@@ -48,3 +48,9 @@ adonis serve
 ```
 
 Go to http://localhost:3333 to see the application in action
+
+## API DOCS
+
+http://localhost:3333/docs/
+
+
