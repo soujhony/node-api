@@ -35329,7 +35329,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "shape shape-style-1 bg-gradient-default" },
+      { staticClass: "shape shape-style-1 bg-gradient-primary" },
       [
         _c("span"),
         _vm._v(" "),
@@ -35722,7 +35722,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "shape shape-style-1 bg-gradient-default" },
+      { staticClass: "shape shape-style-1 bg-gradient-primary" },
       [
         _c("span"),
         _vm._v(" "),
@@ -41739,7 +41739,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "shape shape-style-1 bg-gradient-default" },
+      { staticClass: "shape shape-style-1 bg-gradient-primary" },
       [
         _c("span"),
         _vm._v(" "),
@@ -42083,7 +42083,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "shape shape-style-1 bg-gradient-default" },
+      { staticClass: "shape shape-style-1 bg-gradient-primary" },
       [
         _c("span"),
         _vm._v(" "),
