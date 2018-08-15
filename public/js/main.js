@@ -17444,6 +17444,14 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
       footer: __WEBPACK_IMPORTED_MODULE_3__layout_AppFooter___default.a
     }
   }, {
+    path: "/components",
+    name: "components",
+    components: {
+      header: __WEBPACK_IMPORTED_MODULE_2__layout_AppHeader___default.a,
+      default: __WEBPACK_IMPORTED_MODULE_4__views_Components_vue___default.a,
+      footer: __WEBPACK_IMPORTED_MODULE_3__layout_AppFooter___default.a
+    }
+  }, {
     path: "/login",
     name: "login",
     components: {
@@ -20211,7 +20219,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -20261,6 +20269,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_BaseDropdown___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_BaseDropdown__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_CloseButton__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_CloseButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_CloseButton__);
+//
+//
 //
 //
 //
@@ -21134,6 +21144,19 @@ var render = function() {
                 [
                   _c(
                     "router-link",
+                    { staticClass: "nav-link", attrs: { to: "/components" } },
+                    [_vm._v("See Components")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
                     { staticClass: "nav-link", attrs: { to: "/login" } },
                     [_vm._v("Login")]
                   )
@@ -21257,7 +21280,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -21268,6 +21291,55 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -21307,10 +21379,142 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("h4", { staticClass: "mb-0 font-weight-light" }, [
-              _vm._v("All Contributions are welcome")
+              _vm._v("Let's get in touch on any of these platforms.")
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 text-lg-center btn-wrapper" }, [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg",
+                attrs: {
+                  target: "_blank",
+                  href: "#",
+                  "data-toggle": "tooltip",
+                  "data-original-title": "Follow us"
+                }
+              },
+              [_c("i", { staticClass: "fa fa-twitter" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg",
+                attrs: {
+                  target: "_blank",
+                  href: "#",
+                  "data-toggle": "tooltip",
+                  "data-original-title": "Like us"
+                }
+              },
+              [_c("i", { staticClass: "fa fa-facebook-square" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round",
+                attrs: {
+                  target: "_blank",
+                  href: "#",
+                  "data-toggle": "tooltip",
+                  "data-original-title": "Follow us"
+                }
+              },
+              [_c("i", { staticClass: "fa fa-dribbble" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "btn btn-neutral btn-icon-only btn-github btn-round btn-lg",
+                attrs: {
+                  target: "_blank",
+                  href: "#",
+                  "data-toggle": "tooltip",
+                  "data-original-title": "Star on Github"
+                }
+              },
+              [_c("i", { staticClass: "fa fa-github" })]
+            )
           ])
-        ])
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row align-items-center justify-content-md-between" },
+          [
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "copyright" }, [
+                _vm._v("\n                    © 2018\n                    "),
+                _c("a", { attrs: { href: "#", target: "_blank" } }, [
+                  _vm._v("Adonis, Vue Js, Argon")
+                ]),
+                _vm._v(".\n                ")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("ul", { staticClass: "nav nav-footer justify-content-end" }, [
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { href: "#", target: "_blank" }
+                    },
+                    [_vm._v("Home")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { href: "#", target: "_blank" }
+                    },
+                    [_vm._v("About\n                            Us")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { href: "#", target: "_blank" }
+                    },
+                    [_vm._v("Blog")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "nav-link",
+                      attrs: {
+                        href:
+                          "https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md",
+                        target: "_blank"
+                      }
+                    },
+                    [_vm._v("Argon MIT License")]
+                  )
+                ])
+              ])
+            ])
+          ]
+        )
       ])
     ])
   }
@@ -34363,6 +34567,259 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "home",
@@ -34856,7 +35313,710 @@ var render = function() {
           ])
         ])
       ]
-    )
+    ),
+    _vm._v(" "),
+    _c("section", { staticClass: "section section-lg" }, [
+      _c("div", { staticClass: "container" }, [
+        _vm._m(5),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
+            _c("div", { staticClass: "px-4" }, [
+              _c("img", {
+                directives: [
+                  {
+                    name: "lazy",
+                    rawName: "v-lazy",
+                    value: "img/theme/team-1-800x800.jpg",
+                    expression: "'img/theme/team-1-800x800.jpg'"
+                  }
+                ],
+                staticClass:
+                  "rounded-circle img-center img-fluid shadow shadow-lg--hover",
+                staticStyle: { width: "200px" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "pt-4 text-center" }, [
+                _vm._m(6),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "mt-3" },
+                  [
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "warning",
+                        icon: "fa fa-twitter",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "warning",
+                        icon: "fa fa-facebook",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "warning",
+                        icon: "fa fa-dribbble",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    })
+                  ],
+                  1
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
+            _c("div", { staticClass: "px-4" }, [
+              _c("img", {
+                directives: [
+                  {
+                    name: "lazy",
+                    rawName: "v-lazy",
+                    value: "img/theme/team-2-800x800.jpg",
+                    expression: "'img/theme/team-2-800x800.jpg'"
+                  }
+                ],
+                staticClass:
+                  "rounded-circle img-center img-fluid shadow shadow-lg--hover",
+                staticStyle: { width: "200px" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "pt-4 text-center" }, [
+                _vm._m(7),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "mt-3" },
+                  [
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "primary",
+                        icon: "fa fa-twitter",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "primary",
+                        icon: "fa fa-facebook",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "primary",
+                        icon: "fa fa-dribbble",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    })
+                  ],
+                  1
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
+            _c("div", { staticClass: "px-4" }, [
+              _c("img", {
+                directives: [
+                  {
+                    name: "lazy",
+                    rawName: "v-lazy",
+                    value: "img/theme/team-3-800x800.jpg",
+                    expression: "'img/theme/team-3-800x800.jpg'"
+                  }
+                ],
+                staticClass:
+                  "rounded-circle img-center img-fluid shadow shadow-lg--hover",
+                staticStyle: { width: "200px" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "pt-4 text-center" }, [
+                _vm._m(8),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "mt-3" },
+                  [
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "info",
+                        icon: "fa fa-twitter",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "info",
+                        icon: "fa fa-facebook",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "info",
+                        icon: "fa fa-dribbble",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    })
+                  ],
+                  1
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
+            _c("div", { staticClass: "px-4" }, [
+              _c("img", {
+                directives: [
+                  {
+                    name: "lazy",
+                    rawName: "v-lazy",
+                    value: "img/theme/team-4-800x800.jpg",
+                    expression: "'img/theme/team-4-800x800.jpg'"
+                  }
+                ],
+                staticClass:
+                  "rounded-circle img-center img-fluid shadow shadow-lg--hover",
+                staticStyle: { width: "200px" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "pt-4 text-center" }, [
+                _vm._m(9),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "mt-3" },
+                  [
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "success",
+                        icon: "fa fa-twitter",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "success",
+                        icon: "fa fa-facebook",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("base-button", {
+                      attrs: {
+                        tag: "a",
+                        href: "#",
+                        type: "success",
+                        icon: "fa fa-dribbble",
+                        rounded: "",
+                        "icon-only": ""
+                      }
+                    })
+                  ],
+                  1
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("section", { staticClass: "section section-lg pt-0" }, [
+      _c(
+        "div",
+        { staticClass: "container" },
+        [
+          _c(
+            "card",
+            {
+              staticClass: "border-0",
+              attrs: { gradient: "warning", "no-body": "", "shadow-size": "lg" }
+            },
+            [
+              _c("div", { staticClass: "p-5" }, [
+                _c("div", { staticClass: "row align-items-center" }, [
+                  _c("div", { staticClass: "col-lg-8" }, [
+                    _c("h3", { staticClass: "text-white" }, [
+                      _vm._v("We made website building easier for you.")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "lead text-white mt-3" }, [
+                      _vm._v(
+                        "I will be the leader of a company that ends up being\n                                worth billions of dollars, because I got the answers. I understand culture."
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-3 ml-lg-auto" },
+                    [
+                      _c(
+                        "base-button",
+                        {
+                          attrs: {
+                            tag: "a",
+                            href:
+                              "https://www.creative-tim.com/product/vue-argon-design-system",
+                            type: "white",
+                            block: "",
+                            size: "lg"
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                Download Vue\n                            "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ])
+              ])
+            ]
+          )
+        ],
+        1
+      )
+    ]),
+    _vm._v(" "),
+    _c(
+      "section",
+      { staticClass: "section section-shaped my-0 overflow-hidden" },
+      [
+        _vm._m(10),
+        _vm._v(" "),
+        _c("div", { staticClass: "container pt-lg pb-300" }, [
+          _vm._m(11),
+          _vm._v(" "),
+          _c("div", { staticClass: "row row-grid mt-5" }, [
+            _c(
+              "div",
+              { staticClass: "col-lg-4" },
+              [
+                _c("icon", {
+                  attrs: {
+                    name: "ni ni-settings",
+                    size: "lg",
+                    gradient: "white",
+                    shadow: "",
+                    round: "",
+                    color: "primary"
+                  }
+                }),
+                _vm._v(" "),
+                _c("h5", { staticClass: "text-white mt-3" }, [
+                  _vm._v("Building tools")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-white mt-3" }, [
+                  _vm._v(
+                    "Some quick example text to build on the card title and make up the\n                        bulk of the card's content."
+                  )
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-lg-4" },
+              [
+                _c("icon", {
+                  attrs: {
+                    name: "ni ni-ruler-pencil",
+                    size: "lg",
+                    gradient: "white",
+                    shadow: "",
+                    round: "",
+                    color: "primary"
+                  }
+                }),
+                _vm._v(" "),
+                _c("h5", { staticClass: "text-white mt-3" }, [
+                  _vm._v("Grow your market")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-white mt-3" }, [
+                  _vm._v(
+                    "Some quick example text to build on the card title and make up the\n                        bulk of the card's content."
+                  )
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-lg-4" },
+              [
+                _c("icon", {
+                  attrs: {
+                    name: "ni ni-atom",
+                    size: "lg",
+                    gradient: "white",
+                    shadow: "",
+                    round: "",
+                    color: "primary"
+                  }
+                }),
+                _vm._v(" "),
+                _c("h5", { staticClass: "text-white mt-3" }, [
+                  _vm._v("Launch time")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-white mt-3" }, [
+                  _vm._v(
+                    "Some quick example text to build on the card title and make up the\n                        bulk of the card's content."
+                  )
+                ])
+              ],
+              1
+            )
+          ])
+        ])
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "section",
+      { staticClass: "section section-lg pt-lg-0 section-contact-us" },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row justify-content-center mt--300" }, [
+            _c(
+              "div",
+              { staticClass: "col-lg-8" },
+              [
+                _c(
+                  "card",
+                  {
+                    attrs: {
+                      gradient: "secondary",
+                      shadow: "",
+                      "body-classes": "p-lg-5"
+                    }
+                  },
+                  [
+                    _c("h4", { staticClass: "mb-1" }, [
+                      _vm._v("Want to work with us?")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "mt-0" }, [
+                      _vm._v("Your project is very important to us.")
+                    ]),
+                    _vm._v(" "),
+                    _c("base-input", {
+                      staticClass: "mt-5",
+                      attrs: {
+                        alternative: "",
+                        placeholder: "Your name",
+                        "addon-left-icon": "ni ni-user-run"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("base-input", {
+                      attrs: {
+                        alternative: "",
+                        placeholder: "Email address",
+                        "addon-left-icon": "ni ni-email-83"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("base-input", { staticClass: "mb-4" }, [
+                      _c("textarea", {
+                        staticClass: "form-control form-control-alternative",
+                        attrs: {
+                          name: "name",
+                          rows: "4",
+                          cols: "80",
+                          placeholder: "Type a message..."
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "base-button",
+                      {
+                        attrs: {
+                          type: "default",
+                          round: "",
+                          block: "",
+                          size: "lg"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Send Message\n                        "
+                        )
+                      ]
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ])
+        ])
+      ]
+    ),
+    _vm._v(" "),
+    _c("section", { staticClass: "section section-lg" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row row-grid justify-content-center" }, [
+          _c("div", { staticClass: "col-lg-8 text-center" }, [
+            _vm._m(12),
+            _vm._v(" "),
+            _c("p", { staticClass: "lead" }, [
+              _vm._v(
+                "Cause if you do, it can be yours for FREE. Hit the button below to navigate to\n                        Creative Tim where you can find the Design System in HTML. Start a new project or give an\n                        old Bootstrap project a new look!"
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(13),
+            _vm._v(" "),
+            _c("div", { staticClass: "text-center" }, [
+              _c("h4", { staticClass: "display-4 mb-5 mt-5" }, [
+                _vm._v("Available on these technologies")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row justify-content-center" }, [
+                _c("div", { staticClass: "col-lg-2 col-4" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "https://getbootstrap.com/",
+                        target: "_blank",
+                        "data-toggle": "tooltip",
+                        "data-original-title":
+                          "Bootstrap 4 - Most popular front-end component library"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        directives: [
+                          {
+                            name: "lazy",
+                            rawName: "v-lazy",
+                            value:
+                              "https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg",
+                            expression:
+                              "'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg'"
+                          }
+                        ],
+                        staticClass: "img-fluid"
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-2 col-4" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "https://www.sketchapp.com/",
+                        target: "_blank",
+                        "data-toggle": "tooltip",
+                        "data-original-title":
+                          "[Coming Soon] Sketch - Digital design toolkit"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        directives: [
+                          {
+                            name: "lazy",
+                            rawName: "v-lazy",
+                            value:
+                              "https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg",
+                            expression:
+                              "'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg'"
+                          }
+                        ],
+                        staticClass: "img-fluid opacity-5"
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-2 col-4" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "https://www.adobe.com/products/photoshop.html",
+                        "data-toggle": "tooltip",
+                        "data-original-title":
+                          "[Coming Soon] Adobe Photoshop - Software for digital images manipulation"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        directives: [
+                          {
+                            name: "lazy",
+                            rawName: "v-lazy",
+                            value:
+                              "https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg",
+                            expression:
+                              "'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg'"
+                          }
+                        ],
+                        staticClass: "img-fluid  opacity-5"
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-2 col-4" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "https://vuejs.org/",
+                        target: "_blank",
+                        "data-toggle": "tooltip",
+                        "data-original-title":
+                          "Vue.js - The progressive javascript framework"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        directives: [
+                          {
+                            name: "lazy",
+                            rawName: "v-lazy",
+                            value:
+                              "https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg",
+                            expression:
+                              "'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg'"
+                          }
+                        ],
+                        staticClass: "img-fluid"
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-2 col-4" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "https://angularjs.org/",
+                        target: "_blank",
+                        "data-toggle": "tooltip",
+                        "data-original-title":
+                          "[Coming Soon] Angular - One framework. Mobile & desktop"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        directives: [
+                          {
+                            name: "lazy",
+                            rawName: "v-lazy",
+                            value:
+                              "https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg",
+                            expression:
+                              "'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg'"
+                          }
+                        ],
+                        staticClass: "img-fluid opacity-5"
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-2 col-4" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "https://reactjs.org/",
+                        target: "_blank",
+                        "data-toggle": "tooltip",
+                        "data-original-title":
+                          "[Coming Soon] React - A JavaScript library for building user interfaces"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        directives: [
+                          {
+                            name: "lazy",
+                            rawName: "v-lazy",
+                            value:
+                              "https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg",
+                            expression:
+                              "'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg'"
+                          }
+                        ],
+                        staticClass: "img-fluid opacity-5"
+                      })
+                    ]
+                  )
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
   ])
 }
 var staticRenderFns = [
@@ -34973,6 +36133,136 @@ var staticRenderFns = [
           "The Arctic Ocean freezes every winter and much of the sea-ice then\n                                thaws every summer, and that process will continue whatever happens."
         )
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "row justify-content-center text-center mb-lg" },
+      [
+        _c("div", { staticClass: "col-lg-8" }, [
+          _c("h2", { staticClass: "display-3" }, [_vm._v("The amazing Team")]),
+          _vm._v(" "),
+          _c("p", { staticClass: "lead text-muted" }, [
+            _vm._v(
+              "According to the National Oceanic and Atmospheric Administration,\n                        Ted, Scambos, NSIDClead scentist, puts the potentially record maximum."
+            )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "title" }, [
+      _c("span", { staticClass: "d-block mb-1" }, [_vm._v("Ryan Tompson")]),
+      _vm._v(" "),
+      _c("small", { staticClass: "h6 text-muted" }, [_vm._v("Web Developer")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "title" }, [
+      _c("span", { staticClass: "d-block mb-1" }, [_vm._v("Romina Hadid")]),
+      _vm._v(" "),
+      _c("small", { staticClass: "h6 text-muted" }, [
+        _vm._v("Marketing Strategist")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "title" }, [
+      _c("span", { staticClass: "d-block mb-1" }, [_vm._v("Alexander Smith")]),
+      _vm._v(" "),
+      _c("small", { staticClass: "h6 text-muted" }, [_vm._v("UI/UX Designer")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "title" }, [
+      _c("span", { staticClass: "d-block mb-1" }, [_vm._v("John Doe")]),
+      _vm._v(" "),
+      _c("small", { staticClass: "h6 text-muted" }, [_vm._v("Founder and CEO")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "shape shape-style-3 bg-gradient-default shape-skew" },
+      [
+        _c("span"),
+        _vm._v(" "),
+        _c("span"),
+        _vm._v(" "),
+        _c("span"),
+        _vm._v(" "),
+        _c("span")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "row text-center justify-content-center" },
+      [
+        _c("div", { staticClass: "col-lg-10" }, [
+          _c("h2", { staticClass: "display-3 text-white" }, [
+            _vm._v("Build something")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "lead text-white" }, [
+            _vm._v(
+              "According to the National Oceanic and Atmospheric Administration,\n                        Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent\n                        tihs year down to low ice."
+            )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h2", { staticClass: "display-3" }, [
+      _vm._v("Do you love this awesome\n                        "),
+      _c("span", { staticClass: "text-success" }, [
+        _vm._v("Design System for Bootstrap 4?")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "btn-wrapper" }, [
+      _c(
+        "a",
+        {
+          staticClass: "btn btn-primary mb-3 mb-sm-0",
+          attrs: {
+            href: "https://www.creative-tim.com/product/vue-argon-design-system"
+          }
+        },
+        [_vm._v("Download Vue")]
+      )
     ])
   }
 ]

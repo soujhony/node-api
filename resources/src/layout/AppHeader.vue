@@ -4,7 +4,6 @@
             <a slot="brand" class="navbar-brand mr-lg-5" href="/">
                 <img src="img/brand/white.png">
             </a>
-
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
                     <router-link to="/landing" class="dropdown-item">Home</router-link>
@@ -14,6 +13,9 @@
                 </div>
             </div>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+                <li class="nav-item">
+                    <router-link to="/components" class="nav-link">See Components</router-link>
+                </li>
                 <li class="nav-item">
                     <router-link to="/login" class="nav-link">Login</router-link>
                 </li>
