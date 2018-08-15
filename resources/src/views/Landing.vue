@@ -185,106 +185,9 @@
                 </div>
             </div>
         </section>
-        <section class="section section-lg">
-            <div class="container">
-                <div class="row justify-content-center text-center mb-lg">
-                    <div class="col-lg-8">
-                        <h2 class="display-3">The amazing Team</h2>
-                        <p class="lead text-muted">According to the National Oceanic and Atmospheric Administration,
-                            Ted, Scambos, NSIDClead scentist, puts the potentially record maximum.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-                        <div class="px-4">
-                            <img v-lazy="'img/theme/team-1-800x800.jpg'"
-                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                                 style="width: 200px;">
-                            <div class="pt-4 text-center">
-                                <h5 class="title">
-                                    <span class="d-block mb-1">Ryan Tompson</span>
-                                    <small class="h6 text-muted">Web Developer</small>
-                                </h5>
-                                <div class="mt-3">
-                                    <base-button tag="a" href="#" type="warning" icon="fa fa-twitter" rounded
-                                                 icon-only></base-button>
-                                    <base-button tag="a" href="#" type="warning" icon="fa fa-facebook" rounded
-                                                 icon-only></base-button>
-                                    <base-button tag="a" href="#" type="warning" icon="fa fa-dribbble" rounded
-                                                 icon-only></base-button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-                        <div class="px-4">
-                            <img v-lazy="'img/theme/team-2-800x800.jpg'"
-                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                                 style="width: 200px;">
-                            <div class="pt-4 text-center">
-                                <h5 class="title">
-                                    <span class="d-block mb-1">Romina Hadid</span>
-                                    <small class="h6 text-muted">Marketing Strategist</small>
-                                </h5>
-                                <div class="mt-3">
-                                    <base-button tag="a" href="#" type="primary" icon="fa fa-twitter" rounded
-                                                 icon-only></base-button>
-                                    <base-button tag="a" href="#" type="primary" icon="fa fa-facebook" rounded
-                                                 icon-only></base-button>
-                                    <base-button tag="a" href="#" type="primary" icon="fa fa-dribbble" rounded
-                                                 icon-only></base-button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-                        <div class="px-4">
-                            <img v-lazy="'img/theme/team-3-800x800.jpg'"
-                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                                 style="width: 200px;">
-                            <div class="pt-4 text-center">
-                                <h5 class="title">
-                                    <span class="d-block mb-1">Alexander Smith</span>
-                                    <small class="h6 text-muted">UI/UX Designer</small>
-                                </h5>
-                                <div class="mt-3">
-                                    <base-button tag="a" href="#" type="info" icon="fa fa-twitter" rounded
-                                                 icon-only></base-button>
-                                    <base-button tag="a" href="#" type="info" icon="fa fa-facebook" rounded
-                                                 icon-only></base-button>
-                                    <base-button tag="a" href="#" type="info" icon="fa fa-dribbble" rounded
-                                                 icon-only></base-button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-                        <div class="px-4">
-                            <img v-lazy="'img/theme/team-4-800x800.jpg'"
-                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                                 style="width: 200px;">
-                            <div class="pt-4 text-center">
-                                <h5 class="title">
-                                    <span class="d-block mb-1">John Doe</span>
-                                    <small class="h6 text-muted">Founder and CEO</small>
-                                </h5>
-                                <div class="mt-3">
-                                    <base-button tag="a" href="#" type="success" icon="fa fa-twitter" rounded
-                                                 icon-only></base-button>
-                                    <base-button tag="a" href="#" type="success" icon="fa fa-facebook" rounded
-                                                 icon-only></base-button>
-                                    <base-button tag="a" href="#" type="success" icon="fa fa-dribbble" rounded
-                                                 icon-only></base-button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="section section-lg pt-0">
             <div class="container">
-                <card gradient="warning"
+                <card gradient="primary"
                       no-body
                       shadow-size="lg"
                       class="border-0">
@@ -349,24 +252,38 @@
                 <div class="row justify-content-center mt--300">
                     <div class="col-lg-8">
                         <card gradient="secondary" shadow body-classes="p-lg-5">
+                            <base-alert v-if="formComplete === true" type="success" icon="ni ni-like-2">
+                                <span slot="text"><strong>Success!</strong> Your message has been sent</span>
+                            </base-alert>
+                            <form v-if="formComplete !== true">
                             <h4 class="mb-1">Want to work with us?</h4>
                             <p class="mt-0">Your project is very important to us.</p>
+                            <p v-if="errors.length">
+                                <base-alert v-for="error in errors" type="danger" icon="ni ni-support-16" dismissible>
+                                    <span slot="text">{{ error }}</span>
+                                </base-alert>
+                            </p>
                             <base-input class="mt-5"
                                         alternative
                                         placeholder="Your name"
-                                        addon-left-icon="ni ni-user-run">
+                                        addon-left-icon="ni ni-user-run"
+                                        v-model="name">
                             </base-input>
                             <base-input alternative
                                         placeholder="Email address"
-                                        addon-left-icon="ni ni-email-83">
+                                        addon-left-icon="ni ni-email-83"
+                                        v-model="email">
                             </base-input>
                             <base-input class="mb-4">
                                     <textarea class="form-control form-control-alternative" name="name" rows="4"
-                                              cols="80" placeholder="Type a message..."></textarea>
+                                              cols="80" placeholder="Type a message..."
+                                              v-model="message">
+                                    </textarea>
                             </base-input>
-                            <base-button type="default" round block size="lg">
+                            <base-button type="default" round block size="lg" @click="checkForm()">
                                 Send Message
                             </base-button>
+                            </form>
                         </card>
                     </div>
                 </div>
@@ -379,56 +296,22 @@
                         <h2 class="display-3">Do you love this awesome
                             <span class="text-success">Design System for Bootstrap 4?</span>
                         </h2>
-                        <p class="lead">Cause if you do, it can be yours for FREE. Hit the button below to navigate to
-                            Creative Tim where you can find the Design System in HTML. Start a new project or give an
-                            old Bootstrap project a new look!</p>
-                        <div class="btn-wrapper">
-                            <a href="https://www.creative-tim.com/product/vue-argon-design-system"
-                               class="btn btn-primary mb-3 mb-sm-0">Download Vue</a>
-                        </div>
+                        <p class="lead">Cause if you do, remember that it is open source and free to use</p>
                         <div class="text-center">
-                            <h4 class="display-4 mb-5 mt-5">Available on these technologies</h4>
+                            <h4 class="display-4 mb-5 mt-5">Built with these technologies</h4>
                             <div class="row justify-content-center">
-                                <div class="col-lg-2 col-4">
+                                <div class="col-lg-2 col-6">
                                     <a href="https://getbootstrap.com/" target="_blank" data-toggle="tooltip"
                                        data-original-title="Bootstrap 4 - Most popular front-end component library">
                                         <img v-lazy="'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg'"
                                              class="img-fluid">
                                     </a>
                                 </div>
-                                <div class="col-lg-2 col-4">
-                                    <a href="https://www.sketchapp.com/" target="_blank" data-toggle="tooltip"
-                                       data-original-title="[Coming Soon] Sketch - Digital design toolkit">
-                                        <img v-lazy="'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg'"
-                                             class="img-fluid opacity-5">
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-4">
-                                    <a href="https://www.adobe.com/products/photoshop.html" data-toggle="tooltip"
-                                       data-original-title="[Coming Soon] Adobe Photoshop - Software for digital images manipulation">
-                                        <img v-lazy="'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg'"
-                                             class="img-fluid  opacity-5">
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-4">
+                                <div class="col-lg-2 col-6">
                                     <a href="https://vuejs.org/" target="_blank" data-toggle="tooltip"
                                        data-original-title="Vue.js - The progressive javascript framework">
                                         <img v-lazy="'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg'"
                                              class="img-fluid">
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-4">
-                                    <a href="https://angularjs.org/" target="_blank" data-toggle="tooltip"
-                                       data-original-title="[Coming Soon] Angular - One framework. Mobile &amp; desktop">
-                                        <img v-lazy="'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg'"
-                                             class="img-fluid opacity-5">
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-4">
-                                    <a href="https://reactjs.org/" target="_blank" data-toggle="tooltip"
-                                       data-original-title="[Coming Soon] React - A JavaScript library for building user interfaces">
-                                        <img v-lazy="'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg'"
-                                             class="img-fluid opacity-5">
                                     </a>
                                 </div>
                             </div>
@@ -444,6 +327,35 @@
 <script>
 export default {
   name: "home",
-  components: {}
+   data: function() {
+         return  {
+            errors: [],
+            name: '',
+            email: '',
+            message: '',
+            formComplete: false
+         }
+    },
+    methods:{
+    checkForm: function () {
+        if (this.name && this.email && this.message) {
+            this.errors = [];
+            this.formComplete = true;
+            return true;
+        } 
+        this.errors = [];
+        if (!this.name) {
+            this.errors.push('Name required.');
+        }
+        if (!this.email) {
+            this.errors.push('Email required.');
+        }
+        if (!this.message) {
+            this.errors.push('Message required.');
+        }
+
+        
+        }
+    }
 };
 </script>

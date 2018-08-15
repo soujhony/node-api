@@ -17370,7 +17370,7 @@ var render = function() {
         [
           _c(
             "fade-transition",
-            { attrs: { origin: "center", mode: "out-in", duration: 250 } },
+            { attrs: { origin: "center", mode: "out-in", duration: 200 } },
             [_c("router-view")],
             1
           )
@@ -34703,127 +34703,37 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "home",
-  components: {}
+    name: "home",
+    data: function data() {
+        return {
+            errors: [],
+            name: '',
+            email: '',
+            message: '',
+            formComplete: false
+        };
+    },
+    methods: {
+        checkForm: function checkForm() {
+            if (this.name && this.email && this.message) {
+                this.errors = [];
+                this.formComplete = true;
+                return true;
+            }
+            this.errors = [];
+            if (!this.name) {
+                this.errors.push('Name required.');
+            }
+            if (!this.email) {
+                this.errors.push('Email required.');
+            }
+            if (!this.message) {
+                this.errors.push('Message required.');
+            }
+        }
+    }
 });
 
 /***/ }),
@@ -35315,262 +35225,6 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c("section", { staticClass: "section section-lg" }, [
-      _c("div", { staticClass: "container" }, [
-        _vm._m(5),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
-            _c("div", { staticClass: "px-4" }, [
-              _c("img", {
-                directives: [
-                  {
-                    name: "lazy",
-                    rawName: "v-lazy",
-                    value: "img/theme/team-1-800x800.jpg",
-                    expression: "'img/theme/team-1-800x800.jpg'"
-                  }
-                ],
-                staticClass:
-                  "rounded-circle img-center img-fluid shadow shadow-lg--hover",
-                staticStyle: { width: "200px" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "pt-4 text-center" }, [
-                _vm._m(6),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "mt-3" },
-                  [
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "warning",
-                        icon: "fa fa-twitter",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "warning",
-                        icon: "fa fa-facebook",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "warning",
-                        icon: "fa fa-dribbble",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    })
-                  ],
-                  1
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
-            _c("div", { staticClass: "px-4" }, [
-              _c("img", {
-                directives: [
-                  {
-                    name: "lazy",
-                    rawName: "v-lazy",
-                    value: "img/theme/team-2-800x800.jpg",
-                    expression: "'img/theme/team-2-800x800.jpg'"
-                  }
-                ],
-                staticClass:
-                  "rounded-circle img-center img-fluid shadow shadow-lg--hover",
-                staticStyle: { width: "200px" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "pt-4 text-center" }, [
-                _vm._m(7),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "mt-3" },
-                  [
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "primary",
-                        icon: "fa fa-twitter",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "primary",
-                        icon: "fa fa-facebook",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "primary",
-                        icon: "fa fa-dribbble",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    })
-                  ],
-                  1
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
-            _c("div", { staticClass: "px-4" }, [
-              _c("img", {
-                directives: [
-                  {
-                    name: "lazy",
-                    rawName: "v-lazy",
-                    value: "img/theme/team-3-800x800.jpg",
-                    expression: "'img/theme/team-3-800x800.jpg'"
-                  }
-                ],
-                staticClass:
-                  "rounded-circle img-center img-fluid shadow shadow-lg--hover",
-                staticStyle: { width: "200px" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "pt-4 text-center" }, [
-                _vm._m(8),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "mt-3" },
-                  [
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "info",
-                        icon: "fa fa-twitter",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "info",
-                        icon: "fa fa-facebook",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "info",
-                        icon: "fa fa-dribbble",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    })
-                  ],
-                  1
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 col-lg-3 mb-5 mb-lg-0" }, [
-            _c("div", { staticClass: "px-4" }, [
-              _c("img", {
-                directives: [
-                  {
-                    name: "lazy",
-                    rawName: "v-lazy",
-                    value: "img/theme/team-4-800x800.jpg",
-                    expression: "'img/theme/team-4-800x800.jpg'"
-                  }
-                ],
-                staticClass:
-                  "rounded-circle img-center img-fluid shadow shadow-lg--hover",
-                staticStyle: { width: "200px" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "pt-4 text-center" }, [
-                _vm._m(9),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "mt-3" },
-                  [
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "success",
-                        icon: "fa fa-twitter",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "success",
-                        icon: "fa fa-facebook",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("base-button", {
-                      attrs: {
-                        tag: "a",
-                        href: "#",
-                        type: "success",
-                        icon: "fa fa-dribbble",
-                        rounded: "",
-                        "icon-only": ""
-                      }
-                    })
-                  ],
-                  1
-                )
-              ])
-            ])
-          ])
-        ])
-      ])
-    ]),
-    _vm._v(" "),
     _c("section", { staticClass: "section section-lg pt-0" }, [
       _c(
         "div",
@@ -35580,7 +35234,7 @@ var render = function() {
             "card",
             {
               staticClass: "border-0",
-              attrs: { gradient: "warning", "no-body": "", "shadow-size": "lg" }
+              attrs: { gradient: "primary", "no-body": "", "shadow-size": "lg" }
             },
             [
               _c("div", { staticClass: "p-5" }, [
@@ -35635,10 +35289,10 @@ var render = function() {
       "section",
       { staticClass: "section section-shaped my-0 overflow-hidden" },
       [
-        _vm._m(10),
+        _vm._m(5),
         _vm._v(" "),
         _c("div", { staticClass: "container pt-lg pb-300" }, [
-          _vm._m(11),
+          _vm._m(6),
           _vm._v(" "),
           _c("div", { staticClass: "row row-grid mt-5" }, [
             _c(
@@ -35749,59 +35403,149 @@ var render = function() {
                     }
                   },
                   [
-                    _c("h4", { staticClass: "mb-1" }, [
-                      _vm._v("Want to work with us?")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "mt-0" }, [
-                      _vm._v("Your project is very important to us.")
-                    ]),
-                    _vm._v(" "),
-                    _c("base-input", {
-                      staticClass: "mt-5",
-                      attrs: {
-                        alternative: "",
-                        placeholder: "Your name",
-                        "addon-left-icon": "ni ni-user-run"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("base-input", {
-                      attrs: {
-                        alternative: "",
-                        placeholder: "Email address",
-                        "addon-left-icon": "ni ni-email-83"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("base-input", { staticClass: "mb-4" }, [
-                      _c("textarea", {
-                        staticClass: "form-control form-control-alternative",
-                        attrs: {
-                          name: "name",
-                          rows: "4",
-                          cols: "80",
-                          placeholder: "Type a message..."
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "base-button",
-                      {
-                        attrs: {
-                          type: "default",
-                          round: "",
-                          block: "",
-                          size: "lg"
-                        }
-                      },
-                      [
-                        _vm._v(
-                          "\n                            Send Message\n                        "
+                    _vm.formComplete === true
+                      ? _c(
+                          "base-alert",
+                          { attrs: { type: "success", icon: "ni ni-like-2" } },
+                          [
+                            _c(
+                              "span",
+                              { attrs: { slot: "text" }, slot: "text" },
+                              [
+                                _c("strong", [_vm._v("Success!")]),
+                                _vm._v(" Your message has been sent")
+                              ]
+                            )
+                          ]
                         )
-                      ]
-                    )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.formComplete !== true
+                      ? _c(
+                          "form",
+                          [
+                            _c("h4", { staticClass: "mb-1" }, [
+                              _vm._v("Want to work with us?")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "mt-0" }, [
+                              _vm._v("Your project is very important to us.")
+                            ]),
+                            _vm._v(" "),
+                            _vm.errors.length
+                              ? _c(
+                                  "p",
+                                  _vm._l(_vm.errors, function(error) {
+                                    return _c(
+                                      "base-alert",
+                                      {
+                                        attrs: {
+                                          type: "danger",
+                                          icon: "ni ni-support-16",
+                                          dismissible: ""
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "span",
+                                          {
+                                            attrs: { slot: "text" },
+                                            slot: "text"
+                                          },
+                                          [_vm._v(_vm._s(error))]
+                                        )
+                                      ]
+                                    )
+                                  })
+                                )
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c("base-input", {
+                              staticClass: "mt-5",
+                              attrs: {
+                                alternative: "",
+                                placeholder: "Your name",
+                                "addon-left-icon": "ni ni-user-run"
+                              },
+                              model: {
+                                value: _vm.name,
+                                callback: function($$v) {
+                                  _vm.name = $$v
+                                },
+                                expression: "name"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("base-input", {
+                              attrs: {
+                                alternative: "",
+                                placeholder: "Email address",
+                                "addon-left-icon": "ni ni-email-83"
+                              },
+                              model: {
+                                value: _vm.email,
+                                callback: function($$v) {
+                                  _vm.email = $$v
+                                },
+                                expression: "email"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("base-input", { staticClass: "mb-4" }, [
+                              _c("textarea", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.message,
+                                    expression: "message"
+                                  }
+                                ],
+                                staticClass:
+                                  "form-control form-control-alternative",
+                                attrs: {
+                                  name: "name",
+                                  rows: "4",
+                                  cols: "80",
+                                  placeholder: "Type a message..."
+                                },
+                                domProps: { value: _vm.message },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.message = $event.target.value
+                                  }
+                                }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "base-button",
+                              {
+                                attrs: {
+                                  type: "default",
+                                  round: "",
+                                  block: "",
+                                  size: "lg"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    _vm.checkForm()
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                            Send Message\n                        "
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      : _vm._e()
                   ],
                   1
                 )
@@ -35817,23 +35561,21 @@ var render = function() {
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row row-grid justify-content-center" }, [
           _c("div", { staticClass: "col-lg-8 text-center" }, [
-            _vm._m(12),
+            _vm._m(7),
             _vm._v(" "),
             _c("p", { staticClass: "lead" }, [
               _vm._v(
-                "Cause if you do, it can be yours for FREE. Hit the button below to navigate to\n                        Creative Tim where you can find the Design System in HTML. Start a new project or give an\n                        old Bootstrap project a new look!"
+                "Cause if you do, remember that it is open source and free to use"
               )
             ]),
             _vm._v(" "),
-            _vm._m(13),
-            _vm._v(" "),
             _c("div", { staticClass: "text-center" }, [
               _c("h4", { staticClass: "display-4 mb-5 mt-5" }, [
-                _vm._v("Available on these technologies")
+                _vm._v("Built with these technologies")
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "row justify-content-center" }, [
-                _c("div", { staticClass: "col-lg-2 col-4" }, [
+                _c("div", { staticClass: "col-lg-2 col-6" }, [
                   _c(
                     "a",
                     {
@@ -35863,66 +35605,7 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-lg-2 col-4" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "https://www.sketchapp.com/",
-                        target: "_blank",
-                        "data-toggle": "tooltip",
-                        "data-original-title":
-                          "[Coming Soon] Sketch - Digital design toolkit"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        directives: [
-                          {
-                            name: "lazy",
-                            rawName: "v-lazy",
-                            value:
-                              "https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg",
-                            expression:
-                              "'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg'"
-                          }
-                        ],
-                        staticClass: "img-fluid opacity-5"
-                      })
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-2 col-4" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "https://www.adobe.com/products/photoshop.html",
-                        "data-toggle": "tooltip",
-                        "data-original-title":
-                          "[Coming Soon] Adobe Photoshop - Software for digital images manipulation"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        directives: [
-                          {
-                            name: "lazy",
-                            rawName: "v-lazy",
-                            value:
-                              "https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg",
-                            expression:
-                              "'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg'"
-                          }
-                        ],
-                        staticClass: "img-fluid  opacity-5"
-                      })
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-2 col-4" }, [
+                _c("div", { staticClass: "col-lg-2 col-6" }, [
                   _c(
                     "a",
                     {
@@ -35947,66 +35630,6 @@ var render = function() {
                           }
                         ],
                         staticClass: "img-fluid"
-                      })
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-2 col-4" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "https://angularjs.org/",
-                        target: "_blank",
-                        "data-toggle": "tooltip",
-                        "data-original-title":
-                          "[Coming Soon] Angular - One framework. Mobile & desktop"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        directives: [
-                          {
-                            name: "lazy",
-                            rawName: "v-lazy",
-                            value:
-                              "https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg",
-                            expression:
-                              "'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg'"
-                          }
-                        ],
-                        staticClass: "img-fluid opacity-5"
-                      })
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-2 col-4" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "https://reactjs.org/",
-                        target: "_blank",
-                        "data-toggle": "tooltip",
-                        "data-original-title":
-                          "[Coming Soon] React - A JavaScript library for building user interfaces"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        directives: [
-                          {
-                            name: "lazy",
-                            rawName: "v-lazy",
-                            value:
-                              "https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg",
-                            expression:
-                              "'https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg'"
-                          }
-                        ],
-                        staticClass: "img-fluid opacity-5"
                       })
                     ]
                   )
@@ -36141,68 +35764,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "row justify-content-center text-center mb-lg" },
-      [
-        _c("div", { staticClass: "col-lg-8" }, [
-          _c("h2", { staticClass: "display-3" }, [_vm._v("The amazing Team")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "lead text-muted" }, [
-            _vm._v(
-              "According to the National Oceanic and Atmospheric Administration,\n                        Ted, Scambos, NSIDClead scentist, puts the potentially record maximum."
-            )
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "title" }, [
-      _c("span", { staticClass: "d-block mb-1" }, [_vm._v("Ryan Tompson")]),
-      _vm._v(" "),
-      _c("small", { staticClass: "h6 text-muted" }, [_vm._v("Web Developer")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "title" }, [
-      _c("span", { staticClass: "d-block mb-1" }, [_vm._v("Romina Hadid")]),
-      _vm._v(" "),
-      _c("small", { staticClass: "h6 text-muted" }, [
-        _vm._v("Marketing Strategist")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "title" }, [
-      _c("span", { staticClass: "d-block mb-1" }, [_vm._v("Alexander Smith")]),
-      _vm._v(" "),
-      _c("small", { staticClass: "h6 text-muted" }, [_vm._v("UI/UX Designer")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "title" }, [
-      _c("span", { staticClass: "d-block mb-1" }, [_vm._v("John Doe")]),
-      _vm._v(" "),
-      _c("small", { staticClass: "h6 text-muted" }, [_vm._v("Founder and CEO")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
       { staticClass: "shape shape-style-3 bg-gradient-default shape-skew" },
       [
         _c("span"),
@@ -36246,23 +35807,6 @@ var staticRenderFns = [
       _c("span", { staticClass: "text-success" }, [
         _vm._v("Design System for Bootstrap 4?")
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "btn-wrapper" }, [
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-primary mb-3 mb-sm-0",
-          attrs: {
-            href: "https://www.creative-tim.com/product/vue-argon-design-system"
-          }
-        },
-        [_vm._v("Download Vue")]
-      )
     ])
   }
 ]
