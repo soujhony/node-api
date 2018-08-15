@@ -59,14 +59,10 @@
                     </card>
                     <div class="row mt-3">
                         <div class="col-6">
-                            <a href="#" class="text-light">
-                                <small>Forgot password?</small>
-                            </a>
+                            <router-link to="/forgot-password" class="text-light">Forgot your password?</router-link>
                         </div>
                         <div class="col-6 text-right">
-                            <a href="#" class="text-light">
-                                <small>Create new account</small>
-                            </a>
+                            <router-link to="/register" class="text-light">Don't have an account?</router-link>
                         </div>
                     </div>
                 </div>

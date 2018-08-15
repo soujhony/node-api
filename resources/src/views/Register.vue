@@ -70,6 +70,9 @@
                             </form>
                         </template>
                     </card>
+                    <div class="col-12">
+                        <router-link to="/login" class="text-light">Already have an account?</router-link>
+                    </div>
                 </div>
             </div>
         </div>

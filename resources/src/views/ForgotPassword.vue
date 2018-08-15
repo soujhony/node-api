@@ -54,14 +54,10 @@
                     </card>
                     <div class="row mt-3">
                         <div class="col-6">
-                            <a href="#" class="text-light">
-                                <small>I remember now... Login</small>
-                            </a>
+                            <router-link to="/login" class="text-light">Back to login page</router-link>
                         </div>
                         <div class="col-6 text-right">
-                            <a href="#" class="text-light">
-                                <small>Create new account</small>
-                            </a>
+                            <router-link to="/register" class="text-light">Don't have an account?</router-link>
                         </div>
                     </div>
                 </div>

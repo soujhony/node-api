@@ -35071,7 +35071,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -35082,10 +35082,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
 //
 //
 //
@@ -35288,7 +35284,36 @@ var render = function() {
                 2
               ),
               _vm._v(" "),
-              _vm._m(1)
+              _c("div", { staticClass: "row mt-3" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-6" },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "text-light",
+                        attrs: { to: "/forgot-password" }
+                      },
+                      [_vm._v("Forgot your password?")]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-6 text-right" },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "text-light", attrs: { to: "/register" } },
+                      [_vm._v("Don't have an account?")]
+                    )
+                  ],
+                  1
+                )
+              ])
             ],
             1
           )
@@ -35323,24 +35348,6 @@ var staticRenderFns = [
         _c("span")
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-3" }, [
-      _c("div", { staticClass: "col-6" }, [
-        _c("a", { staticClass: "text-light", attrs: { href: "#" } }, [
-          _c("small", [_vm._v("Forgot password?")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-6 text-right" }, [
-        _c("a", { staticClass: "text-light", attrs: { href: "#" } }, [
-          _c("small", [_vm._v("Create new account")])
-        ])
-      ])
-    ])
   }
 ]
 render._withStripped = true
@@ -35438,7 +35445,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -35449,6 +35456,9 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
 //
 //
 //
@@ -35683,6 +35693,19 @@ var render = function() {
                   ]
                 ],
                 2
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-12" },
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-light", attrs: { to: "/login" } },
+                    [_vm._v("Already have an account?")]
+                  )
+                ],
+                1
               )
             ],
             1
@@ -41475,7 +41498,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -41486,10 +41509,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
 //
 //
 //
@@ -41678,7 +41697,33 @@ var render = function() {
                 2
               ),
               _vm._v(" "),
-              _vm._m(1)
+              _c("div", { staticClass: "row mt-3" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-6" },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "text-light", attrs: { to: "/login" } },
+                      [_vm._v("Back to login page")]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-6 text-right" },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "text-light", attrs: { to: "/register" } },
+                      [_vm._v("Don't have an account?")]
+                    )
+                  ],
+                  1
+                )
+              ])
             ],
             1
           )
@@ -41713,24 +41758,6 @@ var staticRenderFns = [
         _c("span")
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-3" }, [
-      _c("div", { staticClass: "col-6" }, [
-        _c("a", { staticClass: "text-light", attrs: { href: "#" } }, [
-          _c("small", [_vm._v("I remember now... Login")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-6 text-right" }, [
-        _c("a", { staticClass: "text-light", attrs: { href: "#" } }, [
-          _c("small", [_vm._v("Create new account")])
-        ])
-      ])
-    ])
   }
 ]
 render._withStripped = true
