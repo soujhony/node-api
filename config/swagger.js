@@ -12,9 +12,9 @@ module.exports = {
   // enable or disable route '/swagger.json'
   enable: true,
  
-  title: 'Node JS API Documentation',
+  title: 'Adonis API',
   version: '1.0.0',
-  basePath: 'localhost:3333/',
+  basePath: '/',
 
   // security definition config
   securityDefinitions: {
