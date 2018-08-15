@@ -19,7 +19,7 @@
                           class="border-0">
                         <template>
                             <div class="text-muted text-center mb-3">
-                                <small>Sign in with</small>
+                                <small>Don't worry, It happens...</small>
                             </div>
                             <div class="btn-wrapper text-center">
                                 <base-button type="neutral">
@@ -35,41 +35,35 @@
                         </template>
                         <template>
                             <div class="text-center text-muted mb-4">
-                                <small>Or sign up with credentials</small>
+                                <small>Reset your password with email</small>
                             </div>
                             <form role="form">
-                                <base-input alternative
-                                            class="mb-3"
-                                            placeholder="Name"
-                                            addon-left-icon="ni ni-hat-3">
-                                </base-input>
                                 <base-input alternative
                                             class="mb-3"
                                             placeholder="Email"
                                             addon-left-icon="ni ni-email-83">
                                 </base-input>
-                                <base-input alternative
-                                            type="password"
-                                            placeholder="Password"
-                                            addon-left-icon="ni ni-lock-circle-open">
-                                </base-input>
-                                <div class="text-muted font-italic">
-                                    <small>password strength:
-                                        <span class="text-success font-weight-700">strong</span>
-                                    </small>
-                                </div>
-                                <hr />
                                 <base-checkbox>
-                                    <span>I agree with the
-                                        <a href="#">Privacy Policy</a>
-                                    </span>
+                                    I am not a robot
                                 </base-checkbox>
                                 <div class="text-center">
-                                    <base-button type="primary" class="my-4">Create account</base-button>
+                                    <base-button type="primary" class="my-4">Send Reset Email</base-button>
                                 </div>
                             </form>
                         </template>
                     </card>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <a href="#" class="text-light">
+                                <small>I remember now... Login</small>
+                            </a>
+                        </div>
+                        <div class="col-6 text-right">
+                            <a href="#" class="text-light">
+                                <small>Create new account</small>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -22,7 +22,8 @@ const providers = [
   'adonis-swagger/providers/SwaggerProvider',
   '@adonisjs/validator/providers/ValidatorProvider',
   '@adonisjs/mail/providers/MailProvider',
-  'adonis-bumblebee/providers/BumblebeeProvider'
+  'adonis-bumblebee/providers/BumblebeeProvider',
+  '@adonisjs/antl/providers/AntlProvider'
 ]
 
 /*

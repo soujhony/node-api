@@ -6,6 +6,8 @@ import Components from "./views/Components.vue";
 import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
+import ForgotPassword from "./views/ForgotPassword.vue";
+import ResetPassword from "./views/ResetPassword.vue";
 import Profile from "./views/Profile.vue";
 
 Vue.use(Router);
@@ -37,6 +39,24 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Register,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/forgot-password",
+      name: "forgot-password",
+      components: {
+        header: AppHeader,
+        default: ForgotPassword,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/reset-password/:email/:token",
+      name: "reset-password",
+      components: {
+        header: AppHeader,
+        default: ResetPassword,
         footer: AppFooter
       }
     },

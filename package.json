@@ -10,7 +10,8 @@
     "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "prod": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "cypress": "cypress open"
   },
   "keywords": [
     "adonisjs",
@@ -21,6 +22,7 @@
   "private": true,
   "dependencies": {
     "@adonisjs/ace": "^5.0.2",
+    "@adonisjs/antl": "^2.0.6",
     "@adonisjs/auth": "^3.0.5",
     "@adonisjs/bodyparser": "^2.0.3",
     "@adonisjs/cors": "^1.0.6",
@@ -48,6 +50,7 @@
   },
   "devDependencies": {
     "axios": "^0.18.0",
+    "cypress": "^3.1.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue": "^2.5.17",

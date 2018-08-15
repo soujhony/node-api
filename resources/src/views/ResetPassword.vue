@@ -18,40 +18,30 @@
                           body-classes="px-lg-5 py-lg-5"
                           class="border-0">
                         <template>
-                            <div class="text-muted text-center mb-3">
-                                <small>Sign in with</small>
-                            </div>
-                            <div class="btn-wrapper text-center">
-                                <base-button type="neutral">
-                                    <img slot="icon" src="img/icons/common/github.svg">
-                                    Github
-                                </base-button>
-
-                                <base-button type="neutral">
-                                    <img slot="icon" src="img/icons/common/google.svg">
-                                    Google
-                                </base-button>
-                            </div>
-                        </template>
-                        <template>
                             <div class="text-center text-muted mb-4">
-                                <small>Or sign up with credentials</small>
+                                <small>We are so glad you are back! 
+                                    <br />
+                                Remember to choose a strong password</small>
                             </div>
                             <form role="form">
                                 <base-input alternative
                                             class="mb-3"
-                                            placeholder="Name"
-                                            addon-left-icon="ni ni-hat-3">
-                                </base-input>
-                                <base-input alternative
-                                            class="mb-3"
-                                            placeholder="Email"
+                                            :value="email"
                                             addon-left-icon="ni ni-email-83">
                                 </base-input>
                                 <base-input alternative
                                             type="password"
-                                            placeholder="Password"
+                                            placeholder="New Password"
                                             addon-left-icon="ni ni-lock-circle-open">
+                                </base-input>
+                                <base-input alternative
+                                            type="password"
+                                            placeholder="Confirm New Password"
+                                            addon-left-icon="ni ni-lock-circle-open">
+                                </base-input>
+                                <base-input alternative
+                                            type="hidden"
+                                            :value="token">
                                 </base-input>
                                 <div class="text-muted font-italic">
                                     <small>password strength:
@@ -60,12 +50,10 @@
                                 </div>
                                 <hr />
                                 <base-checkbox>
-                                    <span>I agree with the
-                                        <a href="#">Privacy Policy</a>
-                                    </span>
+                                    I am not a robot
                                 </base-checkbox>
                                 <div class="text-center">
-                                    <base-button type="primary" class="my-4">Create account</base-button>
+                                    <base-button type="primary" class="my-4">Reset password</base-button>
                                 </div>
                             </form>
                         </template>
@@ -76,7 +64,14 @@
     </section>
 </template>
 <script>
-export default {};
+export default {
+    data: function() {
+         return  {
+           token: this.$route.params.token,
+           email: this.$route.params.email
+         }
+    },
+};
 </script>
 <style>
 </style>
