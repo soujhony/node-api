@@ -1,11 +1,15 @@
 'use strict'
 
+const User = use('App/Models/User')
 class UserController {
 
-    async currentUser({ response, auth }) {
+    async index({ response, auth, transform }) {
         try {
-            const user = await auth.getUser();
-            return response.json(user);
+            const users = await User.all()
+            return transform.collection(users, user => ({
+                username: user.username,
+                email: user.email
+              }))
         } catch (error) {
             response.json('Error');
         }

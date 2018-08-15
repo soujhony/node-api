@@ -46,7 +46,8 @@ Route.group(() => {
     | API - User
     |--------------------------------------------------------------------------
     */
-   Route.get('/user', 'Api/UserController.currentUser');
+   Route.get('/users', 'Api/UserController.index');
+   Route.get('/user/:id', 'Api/UserController.show');
   }).prefix('api/v1');
 
   Route.any('*', ({ view }) => view.render('frontend'))
