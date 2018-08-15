@@ -1,31 +1,50 @@
-# Adonis fullstack application
+# Adonis, Vue JS and Argon Boilerplate
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+This is the fullstack boilerplate for AdonisJs, Vue JS and Argon Design it comes pre-configured with.
 
 1. Bodyparser
-2. Session
+2. JWT
 3. Authentication
 4. Web security middleware
 5. CORS
 6. Edge template engine
 7. Lucid ORM
 8. Migrations and seeds
+9. 4 Fully Designed Pages
 
 ## Setup
 
-Use the adonis command to install the blueprint
+Clone the Repo
 
 ```bash
-adonis new yardstick
+git clone https://github.com/devingray/node-api.git <project-name>
 ```
 
-or manually clone the repo and then run `npm install`.
+Install Dependancies
 
+```bash
+yarn
+```
 
-### Migrations
+Prepare your database and email service
 
-Run the following command to run startup migrations.
-
-```js
+```bash 
+cp .env.example .env
+vim .env
+~~~~~ Add your details
 adonis migration:run
 ```
+
+Setup the Frontend to watch for changes
+
+```bash
+yarn run watch
+```
+
+Open a new tab and run the application
+
+```bash 
+adonis serve
+```
+
+Go to http://localhost:3333 to see the application in action
