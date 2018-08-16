@@ -2,17 +2,24 @@ import Vue from "vue";
 import Router from "vue-router";
 import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
-import Components from "./views/Components.vue";
-import Landing from "./views/Landing.vue";
-import Login from "./views/Login.vue";
-import Register from "./views/Register.vue";
-import ForgotPassword from "./views/ForgotPassword.vue";
-import ResetPassword from "./views/ResetPassword.vue";
-import Profile from "./views/Profile.vue";
+import Components from "./views/Pages/Components.vue";
+import NotFound from "./views/Pages/NotFound.vue";
+import Landing from "./views/Pages/Landing.vue";
+import Login from "./views/Authentication/Login.vue";
+import Register from "./views/Authentication/Register.vue";
+import ConfirmEmail from "./views/Authentication/ConfirmEmail.vue";
+import ForgotPassword from "./views/Authentication/ForgotPassword.vue";
+import ResetPassword from "./views/Authentication/ResetPassword.vue";
+import Profile from "./views/Pages/Profile.vue";
+
+import AppInit from './guards/AppInit';
+import RedirectIfLoggedIn from './guards/RedirectIfLoggedIn';
+import IsLoggedIn from './guards/IsLoggedIn';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   linkExactActiveClass: "active",
   routes: [
     {
@@ -21,6 +28,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Landing,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "*",
+      name: "not-found",
+      components: {
+        header: AppHeader,
+        default: NotFound,
         footer: AppFooter
       }
     },
@@ -36,6 +52,7 @@ export default new Router({
     {
       path: "/login",
       name: "login",
+      beforeEnter: RedirectIfLoggedIn,
       components: {
         header: AppHeader,
         default: Login,
@@ -45,6 +62,7 @@ export default new Router({
     {
       path: "/register",
       name: "register",
+      beforeEnter: RedirectIfLoggedIn,
       components: {
         header: AppHeader,
         default: Register,
@@ -52,8 +70,18 @@ export default new Router({
       }
     },
     {
+      path: "/email-confirmed/:email",
+      name: "confirm-email",
+      components: {
+        header: AppHeader,
+        default: ConfirmEmail,
+        footer: AppFooter
+      }
+    },
+    {
       path: "/forgot-password",
       name: "forgot-password",
+      beforeEnter: RedirectIfLoggedIn,
       components: {
         header: AppHeader,
         default: ForgotPassword,
@@ -63,6 +91,7 @@ export default new Router({
     {
       path: "/reset-password/:email/:token",
       name: "reset-password",
+      beforeEnter: RedirectIfLoggedIn,
       components: {
         header: AppHeader,
         default: ResetPassword,
@@ -72,12 +101,12 @@ export default new Router({
     {
       path: "/profile",
       name: "profile",
+      beforeEnter: IsLoggedIn,
       components: {
         header: AppHeader,
         default: Profile,
         footer: AppFooter
       },
-      meta: { requiresAuth: true}
     }
   ],
 

@@ -31,8 +31,7 @@ class AuthController {
         const validation = await validate(request.all(), rules)
         if (!validation.fails()) {
             const { username, email, password } = request.only(['username', 'email', 'password'])
-            const confirmation_token = Uuid()
-            const user = await User.create({ username, email, password, confirmation_token })
+            const user = await User.create({ username, email, password })
             await Mail.send('emails.welcome', user.toJSON(), (message) => {
                 message
                   .to(user.email)
@@ -104,7 +103,16 @@ class AuthController {
           const { email, password } = request.only(['email', 'password']);
           const validation = await validate({ email, password }, rules);
           if (!validation.fails()) {
-              return await auth.withRefreshToken().attempt(email, password);
+              const token = await auth.withRefreshToken().attempt(email, password)
+              if(token){
+                const user = await User.findByOrFail('email', email )
+                const data = {
+                  "token": token,
+                  "user": user
+                }
+                response.status(201).json(data)
+              }
+              
           } else {
             response.status(401).send(validation.messages());
           }

@@ -35,43 +35,40 @@
                         </template>
                         <template>
                             <div class="text-center text-muted mb-4">
-                                <small>Or sign up with credentials</small>
+                                <small>Or sign in with credentials</small>
                             </div>
                             <form role="form">
                                 <base-input alternative
                                             class="mb-3"
-                                            placeholder="Name"
-                                            addon-left-icon="ni ni-hat-3">
-                                </base-input>
-                                <base-input alternative
-                                            class="mb-3"
                                             placeholder="Email"
-                                            addon-left-icon="ni ni-email-83">
+                                            addon-left-icon="ni ni-email-83"
+                                            v-model="user.email">
                                 </base-input>
                                 <base-input alternative
                                             type="password"
                                             placeholder="Password"
-                                            addon-left-icon="ni ni-lock-circle-open">
+                                            addon-left-icon="ni ni-lock-circle-open"
+                                            v-model="user.password">
                                 </base-input>
-                                <div class="text-muted font-italic">
-                                    <small>password strength:
-                                        <span class="text-success font-weight-700">strong</span>
-                                    </small>
-                                </div>
-                                <hr />
                                 <base-checkbox>
-                                    <span>I agree with the
-                                        <a href="#">Privacy Policy</a>
-                                    </span>
+                                    Remember me
                                 </base-checkbox>
                                 <div class="text-center">
-                                    <base-button type="primary" class="my-4">Create account</base-button>
+                                    <base-button 
+                                        type="primary" 
+                                        class="my-4"
+                                        @click.prevent="loginUser(user)">Sign In</base-button>
                                 </div>
                             </form>
                         </template>
                     </card>
-                    <div class="col-12">
-                        <router-link to="/login" class="text-light">Already have an account?</router-link>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <router-link to="/forgot-password" class="text-light">Forgot password?</router-link>
+                        </div>
+                        <div class="col-6 text-right">
+                            <router-link to="/register" class="text-light">Register</router-link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,7 +76,32 @@
     </section>
 </template>
 <script>
-export default {};
+import { mapActions } from 'vuex';
+import Auth from '../../services/Auth';
+
+export default {
+  name: 'login',
+  data () {
+    return {
+    	user: {
+    		email: '',
+    		password: ''
+    	}
+    }
+  },
+	methods: {
+  	...mapActions({
+  		setFeedback: 'feedback/setFeedback',
+        setDelayedFeedback: 'feedback/setDelayedFeedback',
+  		login: 'auth/login'
+  	}),
+  	loginUser (user) {
+  		this.login(user)
+		.then(() => this.$router.push({path: '/profile'}))
+		.catch((error) => this.setFeedback({message: error.data, type: 'warning'}));
+    }
+  }
+}
 </script>
 <style>
 </style>
