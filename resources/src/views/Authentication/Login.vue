@@ -59,10 +59,10 @@
                     </card>
                     <div class="row mt-3">
                         <div class="col-6">
-                            <router-link to="/forgot-password" class="text-light">Forgot your password?</router-link>
+                            <router-link to="/forgot-password" class="text-light">Forgot password?</router-link>
                         </div>
                         <div class="col-6 text-right">
-                            <router-link to="/register" class="text-light">Don't have an account?</router-link>
+                            <router-link to="/register" class="text-light">Register</router-link>
                         </div>
                     </div>
                 </div>
