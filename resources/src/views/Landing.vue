@@ -259,7 +259,7 @@
                             <h4 class="mb-1">Want to work with us?</h4>
                             <p class="mt-0">Your project is very important to us.</p>
                             <p v-if="errors.length">
-                                <base-alert v-for="error in errors" type="danger" icon="ni ni-support-16" dismissible>
+                                <base-alert v-for="error in errors" :key="error.message" type="danger" icon="ni ni-support-16" dismissible>
                                     <span slot="text">{{ error }}</span>
                                 </base-alert>
                             </p>
@@ -280,7 +280,7 @@
                                               v-model="message">
                                     </textarea>
                             </base-input>
-                            <base-button type="default" round block size="lg" @click="checkForm()">
+                            <base-button type="default" round block size="lg" v-on:click="checkForm">
                                 Send Message
                             </base-button>
                             </form>

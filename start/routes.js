@@ -35,6 +35,15 @@ Route.group(() => {
 
     /*
     |--------------------------------------------------------------------------
+    | API - Social Authentication
+    |--------------------------------------------------------------------------
+    */
+    Route.get('/social/:provider', 'Api/SocialAuthController.redirect');
+    Route.get('/social/authenticated/:provider', 'Api/SocialAuthController.callback');
+    
+
+    /*
+    |--------------------------------------------------------------------------
     | API - Password Control
     |--------------------------------------------------------------------------
     */
@@ -46,8 +55,9 @@ Route.group(() => {
     | API - User
     |--------------------------------------------------------------------------
     */
-   Route.get('/users', 'Api/UserController.index');
-   Route.get('/user/:id', 'Api/UserController.show');
+    Route.get('/users', 'Api/UserController.index');
+    Route.get('/user/:id', 'Api/UserController.show');
+
   }).prefix('api/v1');
 
-  Route.any('*', ({ view }) => view.render('frontend'))
+  Route.any('*', ({ view }) => view.render('frontend'));
