@@ -12,6 +12,10 @@ import ForgotPassword from "./views/Authentication/ForgotPassword.vue";
 import ResetPassword from "./views/Authentication/ResetPassword.vue";
 import Profile from "./views/Pages/Profile.vue";
 
+import AppInit from './guards/AppInit';
+import RedirectIfLoggedIn from './guards/RedirectIfLoggedIn';
+import IsLoggedIn from './guards/IsLoggedIn';
+
 Vue.use(Router);
 
 export default new Router({
@@ -48,6 +52,7 @@ export default new Router({
     {
       path: "/login",
       name: "login",
+      beforeEnter: RedirectIfLoggedIn,
       components: {
         header: AppHeader,
         default: Login,
@@ -57,6 +62,7 @@ export default new Router({
     {
       path: "/register",
       name: "register",
+      beforeEnter: RedirectIfLoggedIn,
       components: {
         header: AppHeader,
         default: Register,
@@ -75,6 +81,7 @@ export default new Router({
     {
       path: "/forgot-password",
       name: "forgot-password",
+      beforeEnter: RedirectIfLoggedIn,
       components: {
         header: AppHeader,
         default: ForgotPassword,
@@ -84,6 +91,7 @@ export default new Router({
     {
       path: "/reset-password/:email/:token",
       name: "reset-password",
+      beforeEnter: RedirectIfLoggedIn,
       components: {
         header: AppHeader,
         default: ResetPassword,
@@ -93,12 +101,12 @@ export default new Router({
     {
       path: "/profile",
       name: "profile",
+      beforeEnter: IsLoggedIn,
       components: {
         header: AppHeader,
         default: Profile,
         footer: AppFooter
       },
-      meta: { requiresAuth: true}
     }
   ],
 

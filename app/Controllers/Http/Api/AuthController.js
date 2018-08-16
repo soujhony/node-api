@@ -103,7 +103,16 @@ class AuthController {
           const { email, password } = request.only(['email', 'password']);
           const validation = await validate({ email, password }, rules);
           if (!validation.fails()) {
-              response.status(201).json(await auth.withRefreshToken().attempt(email, password))
+              const token = await auth.withRefreshToken().attempt(email, password)
+              if(token){
+                const user = await User.findByOrFail('email', email )
+                const data = {
+                  "token": token,
+                  "user": user
+                }
+                response.status(201).json(data)
+              }
+              
           } else {
             response.status(401).send(validation.messages());
           }

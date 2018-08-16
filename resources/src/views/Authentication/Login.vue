@@ -41,18 +41,23 @@
                                 <base-input alternative
                                             class="mb-3"
                                             placeholder="Email"
-                                            addon-left-icon="ni ni-email-83">
+                                            addon-left-icon="ni ni-email-83"
+                                            v-model="user.email">
                                 </base-input>
                                 <base-input alternative
                                             type="password"
                                             placeholder="Password"
-                                            addon-left-icon="ni ni-lock-circle-open">
+                                            addon-left-icon="ni ni-lock-circle-open"
+                                            v-model="user.password">
                                 </base-input>
                                 <base-checkbox>
                                     Remember me
                                 </base-checkbox>
                                 <div class="text-center">
-                                    <base-button type="primary" class="my-4">Sign In</base-button>
+                                    <base-button 
+                                        type="primary" 
+                                        class="my-4"
+                                        @click.prevent="loginUser(user)">Sign In</base-button>
                                 </div>
                             </form>
                         </template>
@@ -71,7 +76,32 @@
     </section>
 </template>
 <script>
-export default {};
+import { mapActions } from 'vuex';
+import Auth from '../../services/Auth';
+
+export default {
+  name: 'login',
+  data () {
+    return {
+    	user: {
+    		email: '',
+    		password: ''
+    	}
+    }
+  },
+	methods: {
+  	...mapActions({
+  		setFeedback: 'feedback/setFeedback',
+        setDelayedFeedback: 'feedback/setDelayedFeedback',
+  		login: 'auth/login'
+  	}),
+  	loginUser (user) {
+  		this.login(user)
+		.then(() => this.$router.push({path: '/profile'}))
+		.catch((error) => this.setFeedback({message: error.data, type: 'warning'}));
+    }
+  }
+}
 </script>
 <style>
 </style>

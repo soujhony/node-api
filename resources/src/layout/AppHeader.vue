@@ -21,7 +21,22 @@
                 </li>
                 <li class="nav-item">
                     <router-link to="/register" class="nav-link">Register</router-link>
-                </li>  
+                </li>
+                <base-dropdown>
+                    <base-button slot="title" type="primary" class="dropdown-toggle">
+                        <img src="https://demos.creative-tim.com/argon-design-system/assets/img/icons/flags/GB.png" /> English
+                    </base-button>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <img src="https://demos.creative-tim.com/argon-design-system/assets/img/icons/flags/GB.png" /> English(UK)
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <img src="https://demos.creative-tim.com/argon-design-system/assets/img/icons/flags/DE.png" /> Deutsch
+                        </a>
+                    </li>
+                </base-dropdown>
             </ul>
         </base-nav>
     </header>
