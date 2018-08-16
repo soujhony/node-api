@@ -31,8 +31,7 @@ class AuthController {
         const validation = await validate(request.all(), rules)
         if (!validation.fails()) {
             const { username, email, password } = request.only(['username', 'email', 'password'])
-            const confirmation_token = Uuid()
-            const user = await User.create({ username, email, password, confirmation_token })
+            const user = await User.create({ username, email, password })
             await Mail.send('emails.welcome', user.toJSON(), (message) => {
                 message
                   .to(user.email)

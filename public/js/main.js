@@ -17434,6 +17434,7 @@ if (false) {
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
+  mode: 'history',
   linkExactActiveClass: "active",
   routes: [{
     path: "/",
@@ -21131,7 +21132,7 @@ var render = function() {
               attrs: { slot: "brand", href: "/" },
               slot: "brand"
             },
-            [_c("img", { attrs: { src: "img/brand/white.png" } })]
+            [_c("img", { attrs: { src: "/img/brand/white.png" } })]
           ),
           _vm._v(" "),
           _c(

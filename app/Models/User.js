@@ -2,6 +2,7 @@
 
 const Hash = use('Hash')
 const Model = use('Model')
+const Uuid = require('uuid/v4');
 
 /** 
 *  @swagger
@@ -34,6 +35,10 @@ class User extends Model {
       if (userInstance.dirty.password) {
         userInstance.password = await Hash.make(userInstance.password)
       }
+    })
+
+    this.addHook('beforeSave', async (userInstance) => {
+      userInstance.confirmation_token = Uuid()
     })
   }
 
